@@ -7,6 +7,7 @@ import java.util.Map;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -15,12 +16,12 @@ import steps.iOSAndroidSetup;
 
 public class CalculadoraScreen extends iOSAndroidSetup{
 		
-	
 	public void openApp() throws MalformedURLException {
 		
-		iOSAndroidSetup.instance.start();
+		iOSAndroidSetup.instance.start(System.getProperty("environment"));
 		driver = iOSAndroidSetup.instance.driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		
 		
 	}
 	

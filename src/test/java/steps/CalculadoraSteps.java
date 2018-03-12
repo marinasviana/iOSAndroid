@@ -2,6 +2,8 @@ package steps;
 
 import static org.junit.Assert.assertEquals;
 
+import java.net.MalformedURLException;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.support.PageFactory;
@@ -15,15 +17,11 @@ import screens.CalculadoraScreen;
 	
 public class CalculadoraSteps extends CalculadoraScreen{
 	
-	
-	
-	
+
 
 	@Dado("^que estou com a calculadora aberta$")
 	public void que_estou_com_a_calculadora_aberta() throws Throwable {
 		openApp();
-		
-		
 	}
 
 	@Quando("^quando informo os numeros (\\d+) e (\\d+)$")
