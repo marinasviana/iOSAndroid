@@ -22,6 +22,8 @@ If you want to run in the eclipse
 - If you want to run in iOS device 
 
 put in the field Goals: -Denv.PLATAFORM=Ios -Dtest=Test Runer 
+
+
 =================================================================================
 
 ## Sobre o projeto
