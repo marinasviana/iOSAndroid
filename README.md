@@ -13,13 +13,13 @@ If you want to run in the eclipse
 
  -> Right-click on the project name
 
- -> constructing Maven ...
+ -> Maven build...
 
- -> put in the field Goals: -Denv.PLATAFORM=Android -Dtest=Test Runer
+ -> put in the field Goals: -Denv.PLATAFORM=Android -Dtest=Runer test
 
  -> and click the 'Apply' button, then click the 'Run'
 
-- If you want to run in iOS device put in the field Goals: -Denv.PLATAFORM=Ios -Dtest=Test Runer 
+- If you want to run in iOS device put in the field Goals: -Denv.PLATAFORM=Ios -Dtest=Runer test
 
 
 =================================================================================
