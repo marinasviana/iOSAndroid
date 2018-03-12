@@ -4,6 +4,7 @@
 ## Run
 
 Run the tests with maven sending plataform name by parameter
+
 mvn -Denv.PLATAFORM=Android -Dtest=Runer test
 
 Or
