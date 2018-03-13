@@ -5,7 +5,9 @@
 
 Run the tests with maven sending plataform name by parameter
 
-mvn -Denv.PLATAFORM=Android -Dtest=Runer test
+iOS - mvn test -Denv.PLATAFORM=Ios
+
+Androide - mvn test -Denv.PLATAFORM=Android
 
 Or
 
@@ -15,12 +17,11 @@ If you want to run in the eclipse
 
  -> Maven build...
 
- -> put in the field Goals: -Denv.PLATAFORM=Android -Dtest=Runer test
+ -> put in the field Goals: test -Denv.PLATAFORM=Android
 
  -> and click the 'Apply' button, then click the 'Run'
 
-- If you want to run in iOS device put in the field Goals: -Denv.PLATAFORM=Ios -Dtest=Runer test
-
+- If you want to run in iOS device put in the field Goals: test -Denv.PLATAFORM=Ios
 
 =================================================================================
 

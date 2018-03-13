@@ -8,21 +8,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
+
 import steps.iOSAndroidSetup;
 
 public class CalculadoraScreen extends iOSAndroidSetup{
-		
-	public void openApp() throws MalformedURLException {
-		
-		iOSAndroidSetup.instance.start(System.getProperty("environment"));
-		driver = iOSAndroidSetup.instance.driver;
+	
+	private AppiumDriver<MobileElement> appiumDriver;
+	
+	public void openApp(AppiumDriver<MobileElement> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		
-		
+		this.appiumDriver = driver;
 	}
 	
     @AndroidFindBy(id = "android_field_first_number")
@@ -57,27 +57,29 @@ public class CalculadoraScreen extends iOSAndroidSetup{
     
     
 	
-	public void numeros( int arg1, int  arg2) {
+	public void numeros( String num1, String  num2) {
 		campo1.clear();
+		campo1.click();
+		appiumDriver.getKeyboard().sendKeys(num1);
 		campo2.clear();
-		campo1.sendKeys(Integer.toString(arg1));
-		campo2.sendKeys(Integer.toString(arg2));
-		//driver.navigate().back();
-		driver.hideKeyboard();
+		campo2.click();
+		appiumDriver.getKeyboard().sendKeys(num2);
+		
+		appiumDriver.hideKeyboard();
 	}
 	
-	public void operacaoMatematica(String arg1) {
+	public void operacaoMatematica(String operador) {
 		operacao.put("soma", soma);
 		operacao.put("subtração", subtracao);
 		operacao.put("multiplicação", multiplicacao);
 		operacao.put("divisão", divisao);
-		operacao.get(arg1).click();
+		operacao.get(operador).click();
 		
 	}
 	
-	public WebElement resultado() {
+	public String resultadoObtido() {
 		
-		return resultado;
+		return resultado.getText().trim();
 		
 	}
 }

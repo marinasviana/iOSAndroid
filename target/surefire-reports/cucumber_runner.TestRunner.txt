@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: cucumber_runer.Runer
+Test set: cucumber_runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 85.249 sec - in cucumber_runer.Runer
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.016 sec - in cucumber_runner.TestRunner
