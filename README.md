@@ -5,9 +5,9 @@
 
 Run the tests with maven sending plataform name by parameter
 
-iOS - mvn test -Denv.PLATAFORM=Ios
+iOS -> mvn test -Denv.PLATAFORM=Ios
 
-Androide - mvn test -Denv.PLATAFORM=Android
+Androide -> mvn test -Denv.PLATAFORM=Android
 
 Or
 
